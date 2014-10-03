@@ -1,0 +1,20 @@
+citHeader("To cite radir in publications use:")
+
+citEntry(entry = "Article",
+  title        = "A new inverse regression model applied to radiation biodosimetry.",
+  author       = personList(as.person("Manuel Higueras"),
+                   as.person("Pedro Puig"),
+                   as.person("Elizabeth Ainsbury"),
+                   as.person("Kai Rothkamm")),
+  journal      = "Proceedings of the Royal Society A",
+  year         = "2015",
+  volume       = "471",
+  doi          = "http://dx.doi.org/10.1098/rspa.2014.0588",
+
+  textVersion  =
+  paste("Manuel Higueras, Pedro Puig, Elizabeth Ainsbury, Kai Rothkamm (2015).",
+        "A new inverse regression model applied to radiation biodosimetry.",
+        "Proceedings of the Royal Society A, 471.",
+        "DOI http://dx.doi.org/10.1098/rspa.2014.0588")
+)
+
