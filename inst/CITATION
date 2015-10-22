@@ -18,3 +18,23 @@ citEntry(entry = "Article",
         "DOI http://dx.doi.org/10.1098/rspa.2014.0588")
 )
 
+citEntry(entry = "Article",
+  title        = "radir package: an R implementation for cytogenetic biodosimetry dose estimation.",
+  author       = personList(as.person("David Moriña"),
+                   as.person("Manuel Higueras"),
+                   as.person("Pedro Puig"),
+                   as.person("Elizabeth Ainsbury"),
+                   as.person("Kai Rothkamm")),
+  journal      = "Journal of Radiological Protection",
+  year         = "2015",
+  volume       = "35",
+  number       = "3",
+  doi          = "http://dx.doi.org/10.1088/0952-4746/35/3/557",
+
+  textVersion  =
+  paste("David Moriña, Manuel Higueras, Pedro Puig, Elizabeth Ainsbury, Kai Rothkamm (2015).",
+        "radir package: an R implementation for cytogenetic biodosimetry dose estimation.",
+        "Journal of Radiological Protection, 35 (3)",
+        "DOI http://dx.doi.org/10.1088/0952-4746/35/3/557")
+)
+

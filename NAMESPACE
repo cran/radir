@@ -1,10 +1,17 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
-
 # Export all names
 exportPattern(".")
+
+S3method(plot, dose.radir)
+S3method(lines, dose.radir)
+S3method(print, summary.dose.radir)
+S3method(summary, dose.radir)
 
 # Import all packages listed as Imports or Depends
 import(
   hermite
 )
+
+importFrom("graphics", "lines", "plot", "polygon")
+  importFrom("stats", "approxfun", "cov", "deriv", "dgamma", "dnbinom",
+             "integrate", "rgamma", "runif", "uniroot")
+  importFrom("utils", "write.table")

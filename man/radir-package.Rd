@@ -36,32 +36,13 @@ Proc R Soc A 2015;\bold{471}, http://dx.doi.org/10.1098/rspa.2014.0588
 \code{\link{dose.distr}}
 }
 \examples{
-### Example 3 (a)
 f <- expression(b1*x+b2*x^2)
 pars <- c("b1","b2")
 beta <- c(3.126e-3, 2.537e-2)
 cov  <- matrix(c(7.205e-06,-3.438e-06,-3.438e-06,2.718e-06),nrow=2)
 
-### (a)
 ex1.a <- dose.distr(f, pars, beta, cov, cells=1811, dics=102, 
 m.prior="normal", d.prior="uniform", prior.param=c(0, Inf))
 summary(ex1.a)
 plot(ex1.a)
-
-### (b)
-ex1.b <- dose.distr(f, pars, beta, cov, cells=1811, dics=102, 
-m.prior="gamma", d.prior="uniform", prior.param=c(0, Inf))
-plot(ex1.b)
-lines(ex1.a, col="red")
-
-### (c)
-ex1.c <- dose.distr(f, pars, beta, cov, cells=1811, dics=102, 
-m.prior="gamma", d.prior="gamma", prior.param=c(1.75, 0.375))
-summary(ex1.c)
-
-### (d) Normal mean prior & gamma dose prior
-ex1.d <- dose.distr(f, pars, beta, cov, cells=1811, dics=102,
-m.prior="gamma", d.prior="gamma", prior.param=c(1.75, 0.375))
-summary(ex1.d)
-
 }
