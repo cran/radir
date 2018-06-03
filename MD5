@@ -1,9 +1,9 @@
-307dd413c439179db953b275741c2a18 *DESCRIPTION
+6b725bd2bf97988450fe577967fbc826 *DESCRIPTION
 ba9474e72397649433fbafb52da0e299 *NAMESPACE
 890abc76d66f762150393c4fa00770d0 *R/a.R
 83bb2935723c5793b702ad3b7bbb6b56 *R/b.R
 b2ecfed721a9b764bdf23a86393521fc *R/ci.dose.radir.R
-992eded520e59563d5bb84c39ab1f917 *R/dose.distr.R
+179e13d2da1b4ff842f8d19114e8b8f0 *R/dose.distr.R
 eb121913d4ac4379ec84e1692f002c86 *R/lines.dose.radir.R
 550f910abf4cb5fd0e2ce8b2898a34ae *R/plot.dose.radir.R
 ef3cf382c407b7e8f64502ad22787504 *R/pr.dose.radir.R
@@ -16,4 +16,4 @@ ed5cb40d729fa2d068e63b2e15e47208 *R/v.R
 982f8e9bd80465426b95ad55ce9e7196 *man/dose.distr.Rd
 94c7ea2b7a0757ce649c3c2018338315 *man/pr.dose.radir.Rd
 7653534ab5911286011b0d3cd1e009da *man/radir-internal.Rd
-9021a3ebd6a85114faa1f39ddc3b1079 *man/radir-package.Rd
+4a33b5ab53b450247640c05a7072827a *man/radir-package.Rd

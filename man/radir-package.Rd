@@ -13,8 +13,8 @@ The package implements a new inverse regression model with applications to radia
 \tabular{ll}{
 Package: \tab radir\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2014-10-03\cr
+Version: \tab 1.0.3\cr
+Date: \tab 2018-05-17\cr
 License: \tab GPL version 2 or newer\cr
 LazyLoad: \tab yes\cr
 }
