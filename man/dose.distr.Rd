@@ -10,7 +10,7 @@ The function allows the user to estimate radiation doses distribution using the 
 }
 \usage{
 dose.distr(f, pars, beta, cov, cells, dics, m.prior="gamma", 
-d.prior="uniform", prior.param=c(0,"Inf"), stdf=6)
+d.prior="uniform", prior.param=c(0,"Inf"), stdf=6, nsim=1000)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -45,6 +45,8 @@ The \code{gamma} distribution is parametrized in terms of the mean and standard 
 Approximated standard deviation factor. This input is useful to control the ends of the calibrative density; i.e. in case the
 tails of the calibrative dose density are very long this value could
 be reduced, or viceversa. Its default value is 6.}
+\item{nsim}{
+Number of simulations to base the results on. Its default value is 1000.}
 }
 
 \value{
@@ -55,7 +57,7 @@ Higueras M, Puig P, Ainsbury EA, Rothkamm K. A new inverse regression model appl
 Proc R Soc A 2015;\bold{471}, http://dx.doi.org/10.1098/rspa.2014.0588
 }
 \author{
-David Moriña (Centre for Research in Environmental Epidemiology, CREAL), Manuel Higueras (Universitat Autònoma de Barcelona and Public Health England) and Pedro Puig (Universitat Autònoma de Barcelona)
+David Moriña (Barcelona Graduate School of Mathematics), Manuel Higueras (Basque Center for Applied Mathematics) and Pedro Puig (Universitat Autònoma de Barcelona)
 
 Mantainer: David Moriña Soler <david.morina@uab.cat>
 }

@@ -13,8 +13,8 @@ The package implements a new inverse regression model with applications to radia
 \tabular{ll}{
 Package: \tab radir\cr
 Type: \tab Package\cr
-Version: \tab 1.0.3\cr
-Date: \tab 2018-05-17\cr
+Version: \tab 1.0.4\cr
+Date: \tab 2019-6-30\cr
 License: \tab GPL version 2 or newer\cr
 LazyLoad: \tab yes\cr
 }
@@ -22,7 +22,7 @@ The package implements a new inverse regression model with applications to radia
 
 }
 \author{
-David Moriña (Centre for Research in Environmental Epidemiology, CREAL), Manuel Higueras (Universitat Autònoma de Barcelona and Public Health England) and Pedro Puig (Universitat Autònoma de Barcelona)
+David Moriña (Barcelona Graduate School of Mathematics), Manuel Higueras (Basque Center for Applied Mathematics) and Pedro Puig (Universitat Autònoma de Barcelona)
 
 Mantainer: David Moriña Soler <david.morina@uab.cat>
 }

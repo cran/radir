@@ -33,7 +33,7 @@ Higueras M, Puig P, Ainsbury EA, Rothkamm K. A new inverse regression model appl
 Proc R Soc A 2015;\bold{471}, http://dx.doi.org/10.1098/rspa.2014.0588
 }
 \author{
-David Moriña (Centre for Research in Environmental Epidemiology, CREAL), Manuel Higueras (Universitat Autònoma de Barcelona and Public Health England) and Pedro Puig (Universitat Autònoma de Barcelona)
+David Moriña (Barcelona Graduate School of Mathematics), Manuel Higueras (Basque Center for Applied Mathematics) and Pedro Puig (Universitat Autònoma de Barcelona)
 
 Mantainer: David Moriña Soler <david.morina@uab.cat>
 }

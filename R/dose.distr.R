@@ -1,5 +1,5 @@
 dose.distr <-
-  function(f, pars, beta, cov, cells, dics, m.prior="gamma", d.prior="uniform", prior.param=c(0,"Inf"), stdf=6)
+  function(f, pars, beta, cov, cells, dics, m.prior="gamma", d.prior="uniform", prior.param=c(0,"Inf"), stdf=6, nsim=1000)
   { 
     pos   <- 1
     envir <- as.environment(pos)
@@ -21,8 +21,7 @@ dose.distr <-
     v.local <- get("v.local2", envir=envir)
 
     # Doses sequence for the calibrative density
-    pe <- uniroot(function(x) u.local(x) - dics/cells, c(.001, 100), extendInt="yes")$root
-    nsim <- 1000
+    pe <- uniroot(function(x) u.local(x) - dics/cells, c(0.0001, 100), extendInt="yes")$root
     if (d.prior=="uniform" & prior.param[2]!="Inf") rand <- runif(nsim, prior.param[1], prior.param[2])
     if (d.prior=="uniform" & prior.param[2]=="Inf") rand <- runif(nsim, 0, 50)
     if (d.prior=="gamma")   rand <- rgamma(nsim, prior.param[1]^2/prior.param[2]^2, prior.param[1]/prior.param[2]^2)
@@ -45,7 +44,7 @@ dose.distr <-
     }
     if (xl < 0) xl <- 0
     if (xu < 0) xu <- 0
-    x  <- seq(xl, xu, 0.001)
+    x  <- seq(xl, xu, 0.0001)
     l  <- length(x)
     cd <- numeric(l)
     
@@ -53,7 +52,8 @@ dose.distr <-
     {
       # Calibrative density calulation for the gamma mean prior and Uniform dose prior 
       pr <- attr(v.local[[1]](x)(x), "gradient")
-      cd <- sapply(1:l, function(i) dnbinom(dics, a(x[i]), b(x[i])/(b(x[i]) +  cells)))
+      cd <- sapply(1:l, function(i) dnbinom(dics, u.local(x[i])*(u.local(x[i])/(pr[i,] %*% cov %*% as.matrix(pr[i,]))), 
+                                            u.local(x[i])/(pr[i,] %*% cov %*% as.matrix(pr[i,]))/(u.local(x[i])/(pr[i,] %*% cov %*% as.matrix(pr[i,])) + cells)))
       cd <- approxfun(x, cd)
       cnorm <- integrate(cd, lower=xl, upper=xu)$value
       cd <- cd(x)/cnorm
